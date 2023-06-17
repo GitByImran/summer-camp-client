@@ -7,13 +7,13 @@ const NavMenu = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box sx={{ display: isMobile ? "" : "flex", color: "#fff" }}>
-      <MenuItem component={Link} to="" color="inherit">
+      <MenuItem component={Link} to="" color="inherit" sx={{ fontSize: 18 }}>
         Home
       </MenuItem>
-      <MenuItem component={Link} to="" color="inherit">
+      <MenuItem component={Link} to="" color="inherit" sx={{ fontSize: 18 }}>
         Instructors
       </MenuItem>
-      <MenuItem component={Link} to="" color="inherit">
+      <MenuItem component={Link} to="" color="inherit" sx={{ fontSize: 18 }}>
         Classes
       </MenuItem>
     </Box>

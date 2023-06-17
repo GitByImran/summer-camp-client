@@ -7,7 +7,7 @@ const UserMenu = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box sx={{ display: isMobile ? "" : "flex", color: "#fff" }}>
-      <MenuItem component={Link} to="">
+      <MenuItem component={Link} to="" sx={{ fontSize: 18 }}>
         Login
       </MenuItem>
     </Box>

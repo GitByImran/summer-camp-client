@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   AppBar,
@@ -19,6 +19,20 @@ const Header = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [mobileMenuOpen, setMobileMenuOpen] = useState(null);
+  const [scrollBackground, setScrollBackground] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrollBackground(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleLogOut = () => {
     logOut()
@@ -51,9 +65,15 @@ const Header = () => {
   return (
     <AppBar
       position="sticky"
-      sx={{ top: 0, backgroundColor: "transparent", boxShadow: "none" }}
+      sx={{
+        top: 0,
+        backgroundColor: "transparent",
+        boxShadow: "none",
+        background: scrollBackground ? "rgba(0,0,0,0.6)" : "transparent",
+        transition: "background 0.3s ease",
+      }}
     >
-      <Container maxWidth="xl" sx={{ py: 2 }}>
+      <Container maxWidth="lg" sx={{ py: 2 }}>
         <Toolbar disableGutters>
           <Typography sx={{ fontSize: 25, fontWeight: 900, letterSpacing: 2 }}>
             <Link

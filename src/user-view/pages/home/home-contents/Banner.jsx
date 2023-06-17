@@ -1,76 +1,167 @@
-import React, { useState, useEffect } from "react";
-import { Typography, Button, Grid } from "@mui/material";
-// import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import React, { useEffect, useState } from "react";
+import { Typography, Button, Grid, Box } from "@mui/material";
+import About from "./About";
 
 const Banner = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [
-    "https://i.ibb.co/n0y8tqd/vecteezy-futuristic-wonders-discover-the-world-of-ai-generated-small-24238439-569.png",
-    "https://i.ibb.co/60j27MR/vecteezy-innovative-marvels-small-robots-generated-by-ai-for-a-24238433-672.png",
-    "https://i.ibb.co/SVwG4GS/vecteezy-ai-generated-small-robots-futuristic-marvels-of-artificial-24238434-254.png",
-  ];
+  const [showGrids, setShowGrids] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setTimeout(() => {
+      setShowGrids(true);
     }, 1000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
-
+  }, []);
   return (
-    <Grid
-      container
-      style={{
-        padding: "16px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "500px",
-      }}
-    >
-      <Grid item xs={6} style={{ textAlign: "center" }}>
-        <Typography
-          variant="h4"
-          component="h2"
-          sx={{
-            fontSize: "50px",
-            textTransform: "capitalize",
-            fontWeight: 800,
-          }}
-        >
-          let Explore some new
-        </Typography>
-        <Typography variant="body1">
-          Some text describing the banner.
-        </Typography>
-        <Button
-          variant="contained"
-          color="secondary"
-          style={{ marginTop: "16px" }}
-          startIcon="go"
-        >
-          Button
-        </Button>
-      </Grid>
-      {/* <Grid
-        item
-        xs={6}
-        sx={{ height: "500px", width: "auto", overflow: "hidden" }}
+    <div style={{ overflowX: "hidden" }}>
+      <Grid
+        container
+        style={{
+          padding: "0",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "100px",
+          height: "700px",
+        }}
+        sx={{ width: "100%" }}
       >
-        <img
-          src={images[currentImageIndex]}
-          alt="Banner"
+        <Grid
+          item
+          xs={6}
           style={{
-            width: "100%",
-            height: "100%",
-            borderRadius: "8px",
-            objectFit: "contain",
+            textAlign: "left",
+            color: "#fff",
+            transform: showGrids ? "translateX(0)" : "translateX(-100px)",
+            opacity: showGrids ? 1 : 0,
+            transition: "transform 1s linear, opacity 1s linear",
           }}
-        />
-      </Grid> */}
-    </Grid>
+        >
+          <Typography
+            variant="h4"
+            component="h2"
+            sx={{
+              fontSize: "50px",
+              textTransform: "capitalize",
+              fontWeight: 800,
+            }}
+          >
+            let Explore some new
+          </Typography>
+          <Typography variant="body1" sx={{ color: "#f7f7f7", my: 3 }}>
+            Welcome to our exciting and diverse summer camp program! Our
+            campaign is designed to offer a wide range of educational and
+            engaging activities for children and teenagers. With a focus on
+            creativity, skill-building, and personal growth, our camp provides
+            opportunities for learning and exploration in various fields.
+          </Typography>
+          <Button
+            variant="contained"
+            sx={{
+              py: 2,
+              px: 5,
+              fontWeight: 700,
+              letterSpacing: 1,
+              background: "#fff",
+              color: "#000",
+              "&:hover": {
+                background: "linear-gradient(45deg, #353A5F, #9EBAF3)",
+                color: "#fff",
+              },
+            }}
+          >
+            Explore More
+          </Button>
+        </Grid>
+        <Grid
+          item
+          xs={6}
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 3,
+            transform: showGrids ? "translateX(0)" : "translateX(100px)",
+            opacity: showGrids ? 1 : 0,
+            transition: "transform 1s linear, opacity 1s linear",
+          }}
+        >
+          <Box
+            sx={{
+              width: "100%",
+              height: 150,
+              objectFit: "cover",
+              transition: "1s linear",
+              "&:hover": {
+                transform: "translateX(100px)",
+              },
+            }}
+          >
+            <img
+              style={{
+                height: "100%",
+                width: "50%",
+                borderRadius: 8,
+                boxShadow: "0px 0px 10px #f4f4f4",
+                objectFit: "cover",
+              }}
+              src="https://imgv3.fotor.com/images/blog-cover-image/Image-Upscaler-2.jpg"
+              alt=""
+            />
+          </Box>
+          <Box
+            sx={{
+              width: "100%",
+              height: 150,
+              objectFit: "cover",
+              transform: "translateX(150px)",
+              transition: "1s linear",
+              "&:hover": {
+                transform: "translateX(-50px)",
+              },
+            }}
+          >
+            <img
+              style={{
+                height: "100%",
+                width: "50%",
+                borderRadius: 8,
+                boxShadow: "0px 0px 10px #f4f4f4",
+                objectFit: "cover",
+              }}
+              src="https://f.hellowork.com/bdmtools/2021/10/lets-enhance-1-935x628.png"
+              alt=""
+            />
+          </Box>
+          <Box
+            sx={{
+              width: "100%",
+              height: 150,
+              objectFit: "cover",
+              transition: "1s linear",
+              "&:hover": {
+                transform: "translateX(100px)",
+              },
+            }}
+          >
+            <img
+              style={{
+                height: "100%",
+                width: "50%",
+                borderRadius: 8,
+                boxShadow: "0px 0px 10px #f4f4f4",
+                objectFit: "cover",
+              }}
+              src="https://st3.depositphotos.com/2078041/14592/i/600/depositphotos_145929761-stock-photo-fashion-woman-in-sunglasses.jpg"
+              alt=""
+            />
+          </Box>
+        </Grid>
+      </Grid>
+    </div>
   );
 };
 
 export default Banner;
+// background: "linear-gradient(45deg, #353A5F, #9EBAF3)"

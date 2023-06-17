@@ -8,7 +8,7 @@ const Root = () => {
   return (
     <div style={{ background: "linear-gradient(45deg, #353A5F, #9EBAF3)" }}>
       <Header />
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Outlet />
       </Container>
       <Footer />
