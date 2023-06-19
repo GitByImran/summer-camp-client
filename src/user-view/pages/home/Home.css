@@ -1,0 +1,16 @@
+.feedback-paper {
+    position: relative;
+    z-index: -1;
+}
+.feedback-paper::before {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    left: 10%;
+    top: 0;
+    content: "";
+    background: url(https://i.ibb.co/WKtNg5x/quote-icon-0.png) no-repeat;
+    opacity: .3;
+    
+}

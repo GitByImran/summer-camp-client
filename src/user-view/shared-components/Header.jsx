@@ -80,7 +80,7 @@ const Header = () => {
               to="/"
               style={{
                 textDecoration: "none",
-                color: "#fff",
+                color: scrollBackground ? "#fff" : "#000",
               }}
             >
               SUMMER CAMP
@@ -111,10 +111,12 @@ const Header = () => {
                 </IconButton>
               </Box>
             ) : (
-              <NavMenu />
+              <NavMenu scrollBackground={scrollBackground} />
             )}
           </Box>
-          <Box>{!isMobile && <UserMenu />}</Box>
+          <Box>
+            {!isMobile && <UserMenu scrollBackground={scrollBackground} />}
+          </Box>
         </Toolbar>
       </Container>
       {drawerMenu}

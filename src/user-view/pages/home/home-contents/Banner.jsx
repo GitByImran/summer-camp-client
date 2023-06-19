@@ -39,6 +39,7 @@ const Banner = () => {
           <Typography
             variant="h4"
             component="h2"
+            color={"#000"}
             sx={{
               fontSize: "50px",
               textTransform: "capitalize",
@@ -47,7 +48,7 @@ const Banner = () => {
           >
             let Explore some new
           </Typography>
-          <Typography variant="body1" sx={{ color: "#f7f7f7", my: 3 }}>
+          <Typography variant="body1" color={"#000"} sx={{ my: 3 }}>
             Welcome to our exciting and diverse summer camp program! Our
             campaign is designed to offer a wide range of educational and
             engaging activities for children and teenagers. With a focus on
@@ -64,8 +65,8 @@ const Banner = () => {
               background: "#fff",
               color: "#000",
               "&:hover": {
-                background: "linear-gradient(45deg, #353A5F, #9EBAF3)",
-                color: "#fff",
+                background: "transparent",
+                boxShadow: "0px 0px 100px solid #444 !important",
               },
             }}
           >

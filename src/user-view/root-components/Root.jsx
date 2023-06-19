@@ -6,7 +6,8 @@ import { Container } from "@mui/material";
 
 const Root = () => {
   return (
-    <div style={{ background: "linear-gradient(45deg, #353A5F, #9EBAF3)" }}>
+    <div>
+      {/* style={{ background: "linear-gradient(45deg, #353A5F, #9EBAF3)" }}*/}
       <Header />
       <Container maxWidth="lg">
         <Outlet />

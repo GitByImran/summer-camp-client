@@ -25,7 +25,7 @@ const Summary = () => {
           <Box
             sx={{
               background: "transparent",
-              boxShadow: "5px 5px 10px #ffffff36",
+              boxShadow: "5px 5px 10px rgba(0,0,0,0.3)",
               p: 2,
               display: "flex",
               flexDirection: "column",
@@ -41,15 +41,15 @@ const Summary = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 borderRadius: "100%",
-                border: "1px solid #fff",
+                border: "1px solid #000",
               }}
             >
-              <CategoryIcon sx={{ fontSize: "30px", color: "#fff" }} />
+              <CategoryIcon sx={{ fontSize: "30px", color: "#000" }} />
             </Box>
-            <Typography variant="h2" fontWeight={800} color={"#fff"}>
+            <Typography variant="h2" fontWeight={800} color={"#000"}>
               <CountUp end={50} duration={2} />
             </Typography>
-            <Typography variant="body1" color={"#fff"}>
+            <Typography variant="body1" color={"#000"}>
               Categories Available
             </Typography>
           </Box>
@@ -65,7 +65,7 @@ const Summary = () => {
           <Box
             sx={{
               background: "transparent",
-              boxShadow: "5px 5px 10px #ffffff36",
+              boxShadow: "5px 5px 10px rgba(0,0,0,0.3)",
               p: 2,
               display: "flex",
               flexDirection: "column",
@@ -81,18 +81,18 @@ const Summary = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 borderRadius: "100%",
-                border: "1px solid #fff",
+                border: "1px solid #000",
                 fontSize: "30px",
-                color: "#fff",
+                color: "#000",
               }}
             >
               <FaChalkboardTeacher />
             </Box>
 
-            <Typography variant="h2" fontWeight={800} color={"#fff"}>
+            <Typography variant="h2" fontWeight={800} color={"#000"}>
               <CountUp end={60} duration={2} />
             </Typography>
-            <Typography variant="body1" color={"#fff"}>
+            <Typography variant="body1" color={"#000"}>
               Instructors are Teaching
             </Typography>
           </Box>
@@ -108,7 +108,7 @@ const Summary = () => {
           <Box
             sx={{
               background: "transparent",
-              boxShadow: "5px 5px 10px #ffffff36",
+              boxShadow: "5px 5px 10px rgba(0,0,0,0.3)",
               p: 2,
               display: "flex",
               flexDirection: "column",
@@ -124,16 +124,16 @@ const Summary = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 borderRadius: "100%",
-                border: "1px solid #fff",
+                border: "1px solid #000",
               }}
             >
-              <LocalLibraryIcon sx={{ fontSize: "30px", color: "#fff" }} />
+              <LocalLibraryIcon sx={{ fontSize: "30px", color: "#000" }} />
             </Box>
 
-            <Typography variant="h2" fontWeight={800} color={"#fff"}>
+            <Typography variant="h2" fontWeight={800} color={"#000"}>
               <CountUp end={70} duration={2} />
             </Typography>
-            <Typography variant="body1" color={"#fff"}>
+            <Typography variant="body1" color={"#000"}>
               Students are Learning
             </Typography>
           </Box>
@@ -149,7 +149,7 @@ const Summary = () => {
           <Box
             sx={{
               background: "transparent",
-              boxShadow: "5px 5px 10px #ffffff36",
+              boxShadow: "5px 5px 10px rgba(0,0,0,0.3)",
               p: 2,
               display: "flex",
               flexDirection: "column",
@@ -165,16 +165,16 @@ const Summary = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 borderRadius: "100%",
-                border: "1px solid #fff",
+                border: "1px solid #000",
               }}
             >
-              <AccessTimeFilledIcon sx={{ fontSize: "30px", color: "#fff" }} />
+              <AccessTimeFilledIcon sx={{ fontSize: "30px", color: "#000" }} />
             </Box>
 
-            <Typography variant="h2" fontWeight={800} color={"#fff"}>
+            <Typography variant="h2" fontWeight={800} color={"#000"}>
               <CountUp end={80} duration={2} />
             </Typography>
-            <Typography variant="body1" color={"#fff"}>
+            <Typography variant="body1" color={"#000"}>
               Days of Training
             </Typography>
           </Box>
