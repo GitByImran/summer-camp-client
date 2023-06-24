@@ -12,7 +12,7 @@ const UserMenu = ({ scrollBackground }) => {
         color: scrollBackground ? "#fff" : "#000",
       }}
     >
-      <MenuItem component={Link} to="" sx={{ fontSize: 18 }}>
+      <MenuItem component={Link} to="/login" sx={{ fontSize: 18 }}>
         Login
       </MenuItem>
     </Box>
