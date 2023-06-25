@@ -17,6 +17,8 @@
     "aos": "^2.3.4",
     "axios": "^1.4.0",
     "draggabilly": "^3.0.0",
+    "firebase": "^9.23.0",
+    "firebaseui": "^6.0.2",
     "isotope-layout": "^3.0.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

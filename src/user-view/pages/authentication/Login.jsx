@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Grid, Paper, TextField, Button, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const {
@@ -46,6 +47,15 @@ const Login = () => {
               Login
             </Button>
           </form>
+          <Typography mt={3} fontWeight={800}>
+            New here, let's
+            <Link
+              to="/register"
+              style={{ marginLeft: 5, textDecoration: "none", color: "blue" }}
+            >
+              create an account
+            </Link>{" "}
+          </Typography>
         </Paper>
       </Grid>
       <Grid item xs={12} md={6}>
